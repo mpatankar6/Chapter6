@@ -88,5 +88,16 @@ public class SoccerTeam {
 }
 
 /** Output:
- *
+ * Team 1: 3
+ * Team 2: 0
+ * Team 3: 3
+ * Team 4: 3
+ * Total Games Played: 4
+ * Total Goals Scored: 21
+ * Team 1: 1
+ * Team 2: 0
+ * Team 3: 0
+ * Team 4: 1
+ * Total Games Played: 4
+ * Total Goals Scored: 13
  */
