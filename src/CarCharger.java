@@ -53,22 +53,29 @@ public class CarCharger {
      * @return an optimal start time with 0 <= returned value <= 23
      */
     public int getChargeStartTime(int hours){
-        int lowestHour = -1;
-
-        for (int i = 0; i < rateTable.length; i++) {
-            int cost = getChargingCost(i, hours);
-            if (getChargingCost(lowestHour, hours) > cost || lowestHour < 0) {
-                lowestHour = i;
+        int lowestH = -1;
+        int lowestC = 0;
+        for(int i = 0; i < rateTable.length; i++){
+            int currentCost = getChargingCost(i, hours);
+            if(lowestC > currentCost || lowestC == 0){
+                lowestC = currentCost;
+                lowestH = i;
             }
-
         }
-
-
-        return lowestHour;
+        return lowestH;
     }
 
 }
 
-/** Output
- * 
+/* Output
+ * Charging costs
+ * 12 1, 40
+ * 0, 2, 110
+ * 22, 7, 550
+ * 22, 30, 3710
+ * Best start Time
+ * 1 12
+ * 2 0
+ * 7 22
+ * 30 22
  */

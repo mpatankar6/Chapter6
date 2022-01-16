@@ -83,7 +83,7 @@ public class GradeAverage {
 
 }
 
-/**
+/* Output
  * 50.0
  * false
  * 50.6
